@@ -16,6 +16,10 @@ const services = require('./services');
 const appHooks = require('./app.hooks');
 const channels = require('./channels');
 
+const mongoose = require('./mongoose');
+
+const sequelize = require('./sequelize');
+
 const app = express(feathers());
 
 // Load app configuration
@@ -33,6 +37,10 @@ app.use('/', express.static(app.get('public')));
 // Set up Plugins and providers
 app.configure(express.rest());
 app.configure(socketio());
+
+app.configure(mongoose);
+
+app.configure(sequelize);
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);
