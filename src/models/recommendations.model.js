@@ -6,9 +6,29 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const recommendations = sequelizeClient.define('recommendations', {
-    text: {
-      type: DataTypes.STRING,
-      allowNull: false
+    namespace: {
+      type: DataTypes.STRING
+    },
+    person: {
+      type: DataTypes.STRING
+    },
+    action: {
+      type: DataTypes.STRING
+    },
+    thing: {
+      type: DataTypes.STRING
+    },
+    expiresAt: {
+      type: DataTypes.DATE,
+      field: 'expires_at'
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'createdat'
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: 'updatedat'
     }
   }, {
     hooks: {
