@@ -6,6 +6,5 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://localhost:27017/Property-Rental-Service",
-  "postgres": "postgres://apple:123@localhost:5432/mosaic"
+  "mongodb": "mongodb://localhost:27017/Property-Rental-Service"
 }

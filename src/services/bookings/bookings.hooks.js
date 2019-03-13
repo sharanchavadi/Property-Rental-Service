@@ -1,4 +1,4 @@
-
+const postprocess = require('./postprocess');
 
 module.exports = {
   before: {
@@ -15,7 +15,9 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [postprocess.createEvents(),
+             postprocess.getRecommendations()
+            ],
     update: [],
     patch: [],
     remove: []
