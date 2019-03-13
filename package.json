@@ -1,6 +1,6 @@
 {
-  "name": "recommendation-service",
-  "description": "A feathers recommendation service application for properties",
+  "name": "Property-Rental-Service",
+  "description": "A feathers property rental service application for properties",
   "version": "0.0.0",
   "homepage": "",
   "main": "src",
